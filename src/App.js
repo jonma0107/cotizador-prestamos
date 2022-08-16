@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from 'react';
+import Header from './componentes/Header';
+import Formulario from './componentes/Formulario.js'
 
-function App() {
+// un return siempre retorna un elemento que contiene los demás elementos
+// react tiene una sintaxis similar a xml
+
+function App() { // este es el principal componente
+
+  // Para que los useState fluyan del padre al hijo se colocan en el componente principal
+
+  //Definir el State
+  const [cantidad, guardarCantidad] = useState(0)
+  const [plazo, guardarPlazo] = useState(0)
+
+
+  // se pasa las funciones del componente padre a los hijos vía PROPS
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < Fragment >
+
+      <Header
+        titulo="Cotizador de prestamos"
+      />
+
+      <div className="container">
+        <Formulario
+          cantidad={cantidad}
+          guardarCantidad={guardarCantidad}
+          plazo={plazo}
+          guardarPlazo={guardarPlazo}
+        />
+      </div>
+
+    </ Fragment >
   );
 }
 
