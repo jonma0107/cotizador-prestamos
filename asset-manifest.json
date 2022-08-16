@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cotizador-prestamos/static/css/main.cc29df78.css",
+    "main.js": "/cotizador-prestamos/static/js/main.bbfedb73.js",
+    "static/js/787.640a86f7.chunk.js": "/cotizador-prestamos/static/js/787.640a86f7.chunk.js",
+    "index.html": "/cotizador-prestamos/index.html",
+    "main.cc29df78.css.map": "/cotizador-prestamos/static/css/main.cc29df78.css.map",
+    "main.bbfedb73.js.map": "/cotizador-prestamos/static/js/main.bbfedb73.js.map",
+    "787.640a86f7.chunk.js.map": "/cotizador-prestamos/static/js/787.640a86f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc29df78.css",
+    "static/js/main.bbfedb73.js"
+  ]
+}
