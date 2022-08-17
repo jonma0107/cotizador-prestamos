@@ -22,7 +22,7 @@ h1 {
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 2rem;
-  height: 95vh;
+  height: 80vh;
 }
 
 form, .mensajes {
@@ -61,4 +61,12 @@ input[type="submit"]:disabled{
 }
 .resultado p {
   margin: 0;
+}
+
+
+@media screen and (max-width: 250px) {
+  .container{
+    height: 95vh;
+  }
+
 }
