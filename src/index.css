@@ -64,9 +64,9 @@ input[type="submit"]:disabled{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   .container{
-    height: 90vh;
+    height: 95vh;
   }
 
 }
