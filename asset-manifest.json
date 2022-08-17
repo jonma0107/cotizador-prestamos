@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cotizador-prestamos/static/css/main.1e213c82.css",
+    "main.css": "/cotizador-prestamos/static/css/main.7e7452aa.css",
     "main.js": "/cotizador-prestamos/static/js/main.b80075d4.js",
     "static/js/787.640a86f7.chunk.js": "/cotizador-prestamos/static/js/787.640a86f7.chunk.js",
     "index.html": "/cotizador-prestamos/index.html",
-    "main.1e213c82.css.map": "/cotizador-prestamos/static/css/main.1e213c82.css.map",
+    "main.7e7452aa.css.map": "/cotizador-prestamos/static/css/main.7e7452aa.css.map",
     "main.b80075d4.js.map": "/cotizador-prestamos/static/js/main.b80075d4.js.map",
     "787.640a86f7.chunk.js.map": "/cotizador-prestamos/static/js/787.640a86f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e213c82.css",
+    "static/css/main.7e7452aa.css",
     "static/js/main.b80075d4.js"
   ]
 }
