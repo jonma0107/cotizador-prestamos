@@ -26,7 +26,7 @@ h1 {
 }
 
 form, .mensajes {
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -34,8 +34,11 @@ form, .mensajes {
   text-align: center;
 }
 .resultado {
-  border: 2px solid #00b0d7;
-  padding: 3rem 0;
+  border: 3px solid #00b0d7;
+  padding-bottom: 1rem;
+}.resultado h2, h3{
+  font-weight: 400;
+  padding-top: 1rem;
 }
 form label {
   text-align: center;

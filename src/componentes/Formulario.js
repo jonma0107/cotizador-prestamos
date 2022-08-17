@@ -1,12 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import { calcularTotal } from '../helpers.js'
 
-function Formulario({ cantidad, guardarCantidad, plazo, guardarPlazo }) {
+function Formulario(props) {
 
-  // STATE
+  const { cantidad, guardarCantidad, plazo, guardarPlazo, guardarTotal, guardarCargando } = props;
+
+  // Definir STATE para el ERROR
   const [error, guardarError] = useState(false)
 
-  // CUANDO EL USUARIO HACE SUBMIT
+  // ******************************** CUANDO EL USUARIO HACE SUBMIT ***************************
   const calcularPrestamo = e => {
     e.preventDefault();
 
@@ -17,20 +19,30 @@ function Formulario({ cantidad, guardarCantidad, plazo, guardarPlazo }) {
     }
 
     // eliminar el error previo
-    guardarError(false)
+    guardarError(false);
 
-    //Realizar cotización
-    const total = calcularTotal(cantidad, plazo);
-    console.log(total);
+    // Habilitar el Spinner
+    guardarCargando(true);
 
+    setTimeout(() => {
+      // *********************************** Realizar cotización ************************************
+      const total = calcularTotal(cantidad, plazo);
 
-  }
+      // UNA VEZ CALCULADO GUARDAR TOTAL
+      guardarTotal(total)
 
+      //Deshabilitar Spinner
+      guardarCargando(false)
+    }, 3000);
+
+  } // fin calcularPrestamo
+
+  // *************** FUNCION PARA GUARDAR LA CANTIDAD EN LA VARIABLE CANTIDAD DEL STATE **********
   const leerCantidad = (e) => {
     guardarCantidad(parseInt(e.target.value));
   }
 
-  const plazoGuardado = (e) => {
+  const leerPlazo = (e) => {
     guardarPlazo(parseInt(e.target.value));
   }
 
@@ -52,7 +64,7 @@ function Formulario({ cantidad, guardarCantidad, plazo, guardarPlazo }) {
             <label>Plazo para Pagar</label>
             <select
               className="u-full-width"
-              onChange={plazoGuardado}
+              onChange={leerPlazo}
             >
               <option value="0">Seleccionar</option>
               <option value="3">3 meses</option>
